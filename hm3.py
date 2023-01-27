@@ -8,11 +8,11 @@ class Bank:
         return f"на вашем счёте: {self.__balance}, Имя влодельца: {self.__name}"
     def _kill(self):
         user = int(input("сколько вы хотите обноличить: "))
-        if user <= 0:
+        if self.__balance >= user:
             self.__balance -= user
-            return f"на вашем счёте: {self.__balance}"
+            return f"вы обноличили счёт на {user} остаток на карте {self.__balance}"
         else:
-            return f"на вашем счете не хвотает денег, на счете: {self.__balance}"
+            return f"На вашем счете недостаточно средств: {self.__balance}"
     def __jacpot(self):
         return f"ваш счет ужножок на 10, ваш счет: {self.__balance * 10}"
     def user(self,name,__balanse):
@@ -22,6 +22,6 @@ class Bank:
 ban = Bank("askhat")
 print(ban.money_x())
 print(ban._kill())
-print(ban.user("bekbolot", 100))
-print(ban._Bank__jacpot())
+# print(ban.user("bekbolot", 100))
+# print(ban._Bank__jacpot())
 
