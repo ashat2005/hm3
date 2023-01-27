@@ -1,21 +1,27 @@
-# class Wath:
-#     def __init__(self,x,y) -> None:
-#         self.x = x
-#         self.y = y
-#     def add(self):
-#         print("Сложение")
-#         return f"{self.x + self.y}"
-#     def sub(self):
-#         print("вычитание")
-#         return f"{self.x - self.y}"
-#     def mul(self):
-#         print("умножение")
-#         return f"{self.x * self.y}"
-#     def truediv(self):
-#         print("деление")
-#         return f"{self.x // self.y}"
-# a = Wath(100,9)
-# print(a.add())
-# print(a.mul())
-# print(a.sub())
-# print(a.truediv())
+
+
+class Calculator:
+    def __init__(self, num):
+        self.num = num
+
+    def __add__(self, other):
+        print("Сложение")
+        return self.num + other.num
+
+    def __sub__(self, other):
+        print("Вычитание")
+        return self.num - other.num
+
+    def __mul__(self, other):
+        print("Умножение")
+        return self.num * other.num
+
+    def __truediv__(self, other):
+        print("Деление")
+        return self.num / other.num
+a = Calculator(1500)
+b = Calculator(1240)
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)

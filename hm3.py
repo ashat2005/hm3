@@ -22,6 +22,6 @@ class Bank:
 ban = Bank("askhat")
 print(ban.money_x())
 print(ban._kill())
-# print(ban.user("bekbolot", 100))
-# print(ban._Bank__jacpot())
+print(ban.user("bekbolot", 100))
+print(ban._Bank__jacpot())
 
